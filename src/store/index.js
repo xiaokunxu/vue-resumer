@@ -22,7 +22,7 @@ export default new Vuex.Store({
                 { field: 'contacts', icon: 'phone', type: 'array', keys: ['contact', 'content'] },
             ],
             profile: {},
-            'workHistory': [],
+            workHistory: [],
             education: [],
             projects: [],
             awards: [],
