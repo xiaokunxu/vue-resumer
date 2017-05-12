@@ -106,6 +106,9 @@
         &:hover {
             box-shadow: 1px 1px 1px hsla(0, 0, 0, .5);
         }
+        &:focus {
+            outline: none;
+        }
         &.primary {
             background: #02af5f;
             color: #fff;
