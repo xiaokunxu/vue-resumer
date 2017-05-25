@@ -69,14 +69,22 @@ export default new Vuex.Store({
         },
         setResumeId(state, { id }) {
             state.resume.id = id
+        },
+        setResume(state, resume) {
+            console.log('s')
+            state.resumeConfig.map(({ field }) => {
+                Vue.set(state.resume, field, resume[field])
+            })
+            state.resume.id = resume.id
         }
     },
     actions: {
         saveResume({ state, commit }, payload) {
             // 新建一个帖子对象
             var Resume = AV.Object.extend('Resume')
+            var resume = new Resume()
             if (state.resume.id) {
-
+                resume.id = state.resume.id
             } else {
                 var resume = new Resume()
                 resume.set('profile', state.resume.profile)

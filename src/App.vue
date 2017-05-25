@@ -44,8 +44,11 @@
                 // 先临时注释，以免影响后面开发
                 state = JSON.parse(state)
             }
-            this.$store.commit('initState', state)
+
             this.$store.commit('setUser', getAVUser())
+            this.$store.dispath('fetchResume').then(() => {
+                this.$store.commit('ininState', state)
+            })
         }
     }
 </script>
