@@ -85,7 +85,6 @@ export default new Vuex.Store({
             var resume = new Resume()
             if (state.resume.id) {
                 resume.id = state.resume.id
-<<<<<<< HEAD
             }
             resume.set('profile', state.resume.profile)
             resume.set('workHistory', state.resume.workHistory)
@@ -98,20 +97,6 @@ export default new Vuex.Store({
             var acl = new AV.ACL()
             acl.setPublicReadAccess(true)
             acl.setWriteAccess(AV.User.current(), true)
-=======
-            } else {
-                var resume = new Resume()
-                resume.set('profile', state.resume.profile)
-                resume.set('workHistory', state.resume.workHistory)
-                resume.set('education', state.resume.education)
-                resume.set('projects', state.resume.projects)
-                resume.set('awards', state.resume.awards)
-                resume.set('contacts', state.resume.contacts)
-                resume.set('owner_id', getAVUser().id)
-                var acl = new AV.ACL()
-                acl.setPublicReadAccess(true)
-                acl.setWriteAccess(AV.User.current(), true)
->>>>>>> fb5ac08cd2cc7fe3c2d6eca68753eb14f46d1e3c
 
             resume.setACL(acl)
             resume.save().then(function(response) {

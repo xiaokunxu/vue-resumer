@@ -46,11 +46,7 @@
             }
 
             this.$store.commit('setUser', getAVUser())
-<<<<<<< HEAD
             this.$store.dispatch('fetchResume').then(() => {
-=======
-            this.$store.dispath('fetchResume').then(() => {
->>>>>>> fb5ac08cd2cc7fe3c2d6eca68753eb14f46d1e3c
                 this.$store.commit('ininState', state)
             })
         }
