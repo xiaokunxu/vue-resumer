@@ -28,6 +28,14 @@
         }
     }
 </script>
-<style lang="scss">
-
+<style lang="scss" scoped>
+    #resumeEditor {
+        min-height: 35%;
+        background: #444;
+    }
+    
+    #resumePreview {
+        flex-grow: 1;
+        margin-left: 16px;
+    }
 </style>
